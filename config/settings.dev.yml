@@ -1,0 +1,2 @@
+main:
+  db: "mysql://root:12345@localhost:3306/combiner"

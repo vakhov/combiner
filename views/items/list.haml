@@ -1,0 +1,10 @@
+%ul
+- @items.each do |item|
+  %li= item.name
+
+%br
+
+%form{:action=>"/items/add", :method=>"post"}
+  %input{:type=>"text", :name=>"name"}
+  %br
+  %input{:type=>"submit", :value=>"Add", :class=>"btn"}

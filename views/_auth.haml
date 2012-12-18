@@ -1,0 +1,9 @@
+- unless @cur_user
+  %form.navbar-form.pull-right{:action=>"login", :method=>"post"}
+    %input.span2{:placeholder => "Login", :type => "text", :name=>"login"}
+    %input.span2{:placeholder => "Password", :type => "password", :name=>"pwd"}
+    %button.btn{:type => "submit"} Sign in
+- else
+  %p.navbar-text.pull-right
+    = @cur_user.login
+    %a{:href=>"/logout"} logout
