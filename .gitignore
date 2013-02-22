@@ -1,3 +1,4 @@
 libmysql.dll
 web.bat
 config/settings.dev.yml
+.idea/
