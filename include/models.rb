@@ -19,9 +19,22 @@ class Item
 
   property :id, Serial, :key => true
   property :user_id, Integer
-  property :name, String
+  property :name, Text
+  property :url, String
+  property :tags, String
+
+  has n, :tags
 
   belongs_to :user
+end
+
+class Tag
+  include DataMapper::Resource
+
+  property :id, Serial, key: true
+  property :name, String
+
+  belongs_to :item
 end
 
 conn_string = $config["main"]["db"]

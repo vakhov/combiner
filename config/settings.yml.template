@@ -1,2 +1,2 @@
 main:
-  db: "mysql://user:pwd@host:3306/database"
+  db: "mysql://root:@localhost:3306/combiner"

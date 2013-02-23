@@ -2,10 +2,20 @@ GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.2.8)
+    data_objects (0.10.12)
+      addressable (~> 2.1)
     dm-core (1.2.0)
       addressable (~> 2.2.6)
+    dm-do-adapter (1.2.0)
+      data_objects (~> 0.10.6)
+      dm-core (~> 1.2.0)
     dm-migrations (1.2.0)
       dm-core (~> 1.2.0)
+    dm-mysql-adapter (1.2.0)
+      dm-do-adapter (~> 1.2.0)
+      do_mysql (~> 0.10.6)
+    do_mysql (0.10.12)
+      data_objects (= 0.10.12)
     haml (4.0.0)
       tilt
     rack (1.5.2)
@@ -23,5 +33,6 @@ PLATFORMS
 DEPENDENCIES
   dm-core
   dm-migrations
+  dm-mysql-adapter
   haml
   sinatra

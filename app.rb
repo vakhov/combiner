@@ -7,9 +7,9 @@ require 'haml'
 require 'dm-core'
 require 'dm-migrations'
 
-require 'include/load_config'
-require 'include/models'
-require 'include/helpers'
+require File.join(File.dirname( __FILE__ ),'include/load_config')
+require File.join(File.dirname( __FILE__ ),'include/models')
+require File.join(File.dirname( __FILE__ ),'include/helpers')
 #require 'include/config_session'
 
 
@@ -30,5 +30,5 @@ get '/' do
   haml :'_main'
 end
 
-require 'controllers/login'
-require 'controllers/items'
+require File.join(File.dirname( __FILE__ ),'controllers/login')
+require File.join(File.dirname( __FILE__ ),'controllers/items')

@@ -5,6 +5,8 @@
 %br
 
 %form{:action=>"/items/add", :method=>"post"}
-  %input{:type=>"text", :name=>"name"}
+  %input{type: 'text', name: 'url', placeholder: 'URL'}
+  %br
+  %textarea{:name=>"name", placeholder: 'TAGLINE'}
   %br
   %input{:type=>"submit", :value=>"Add", :class=>"btn"}

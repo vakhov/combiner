@@ -6,6 +6,7 @@ end
 post '/items/add' do
   item = Item.new
   item.name = params[:name]
+  item.url = params[:url]
   item.user_id = @cur_user.id
   item.save
   redirect '/items'
