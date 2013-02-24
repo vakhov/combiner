@@ -14,6 +14,7 @@ require File.join(File.dirname( __FILE__ ),'include/helpers')
 
 
 enable :sessions
+set :protection, :except => [:remote_token, :frame_options]
 
 before do
   if session[:user_id].nil? && !['/login', '/'].include?(request.path_info)
