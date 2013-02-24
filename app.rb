@@ -32,3 +32,4 @@ end
 
 require File.join(File.dirname( __FILE__ ),'controllers/login')
 require File.join(File.dirname( __FILE__ ),'controllers/items')
+require File.join(File.dirname( __FILE__ ),'controllers/tags')

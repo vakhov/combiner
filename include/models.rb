@@ -21,12 +21,24 @@ class Item
   property :user_id, Integer
   property :name, Text
   property :url, String
-  property :tags, String
 
-  has n, :tags
+  has n, :links
+  has n, :tags, :through => :links
 
   belongs_to :user
+
 end
+
+
+class Link
+  include DataMapper::Resource
+
+  property :id,         Serial
+
+  belongs_to :item
+  belongs_to :tag
+end
+
 
 class Tag
   include DataMapper::Resource
@@ -34,8 +46,10 @@ class Tag
   property :id, Serial, key: true
   property :name, String
 
-  belongs_to :item
+  has n, :links
+  has n, :items, :through => :links
 end
+
 
 conn_string = $config["main"]["db"]
 

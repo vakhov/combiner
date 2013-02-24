@@ -1,0 +1,7 @@
+%ul
+  - @items.each do |item|
+    %li
+      %ul
+        %li= 'URL: ' + item.url
+        %li= 'TEXT: ' + item.name
+        %li= 'TAGS: ' + test(item)

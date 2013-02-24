@@ -1,3 +1,6 @@
+- @tags.each do |tag|
+  %a{href:'tag/'+tag.name}= tag.name
+
 %ul
 - @items.each do |item|
   %li= item.name
@@ -7,6 +10,8 @@
 %form{:action=>"/items/add", :method=>"post"}
   %input{type: 'text', name: 'url', placeholder: 'URL'}
   %br
-  %textarea{:name=>"name", placeholder: 'TAGLINE'}
+  %textarea{:name=>"tagline", placeholder: 'Цитата'}
+  %br
+  %input{type: 'text', name: 'tags', placeholder: 'Тэги'}
   %br
   %input{:type=>"submit", :value=>"Add", :class=>"btn"}
